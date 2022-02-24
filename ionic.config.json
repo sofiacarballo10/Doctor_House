@@ -1,0 +1,7 @@
+{
+  "name": "cars-client",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

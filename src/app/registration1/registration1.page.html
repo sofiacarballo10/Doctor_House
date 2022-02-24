@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-button shape="circle" slot="start" color="light">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
+        <ion-title>
+            Avi
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large"></ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <h1 class="ion-text-center">¿Cuál es tu número de celular?</h1>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <h2>Número de celular</h2>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item color="light" class="input_item">
+                    <ion-button shape="circle" color="light">
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </ion-button>
+                    <ion-input type="tel" name="phone" placeholder="Ej: 953 456 789"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row class="margin-message">
+            <ion-col size="9">
+                <h2>Te enviaremos un código mediante sms para confirmar tu número de celular</h2>
+            </ion-col>
+            <ion-col size="2">
+                <ion-button color="light" shape="circle">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

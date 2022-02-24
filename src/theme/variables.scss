@@ -1,0 +1,110 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$app-primary: mat.define-palette(mat.$indigo-palette);
+$app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$app-warn: mat.define-palette(mat.$red-palette);
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$app-theme: mat.define-light-theme(( color: ( primary: $app-primary, accent: $app-accent, warn: $app-warn, )));
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($app-theme);
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+/** Ionic CSS Variables **/
+
+:root {
+  /** primary **/
+  --ion-color-primary: #2A698C;
+	--ion-color-primary-rgb: 42,105,140;
+	--ion-color-primary-contrast: #ffffff;
+	--ion-color-primary-contrast-rgb: 255,255,255;
+	--ion-color-primary-shade: #255c7b;
+	--ion-color-primary-tint: #3f7898;
+
+  /** secondary **/
+  --ion-color-secondary: #57ABD9;
+  --ion-color-secondary-rgb: 87,171,217;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0,0,0;
+  --ion-color-secondary-shade: #4d96bf;
+  --ion-color-secondary-tint: #68b3dd;
+
+  /** tertiary **/
+	--ion-color-tertiary: #FFD780;
+	--ion-color-tertiary-rgb: 255,215,128;
+	--ion-color-tertiary-contrast: #000000;
+	--ion-color-tertiary-contrast-rgb: 0,0,0;
+	--ion-color-tertiary-shade: #e0bd71;
+	--ion-color-tertiary-tint: #ffdb8d;
+
+  /** success **/
+	--ion-color-success: #38CB89;
+	--ion-color-success-rgb: 56,203,137;
+	--ion-color-success-contrast: #000000;
+	--ion-color-success-contrast-rgb: 0,0,0;
+	--ion-color-success-shade: #31b379;
+	--ion-color-success-tint: #4cd095;
+
+  /** warning **/
+  --ion-color-warning: #FFAB00;
+	--ion-color-warning-rgb: 255,171,0;
+	--ion-color-warning-contrast: #000000;
+	--ion-color-warning-contrast-rgb: 0,0,0;
+	--ion-color-warning-shade: #e09600;
+	--ion-color-warning-tint: #ffb31a;
+
+  /** danger **/
+  --ion-color-danger: #F34355;
+	--ion-color-danger-rgb: 243,67,85;
+	--ion-color-danger-contrast: #ffffff;
+	--ion-color-danger-contrast-rgb: 255,255,255;
+	--ion-color-danger-shade: #d63b4b;
+	--ion-color-danger-tint: #f45666;
+
+  /** dark **/
+  --ion-color-dark: #1A202C;
+	--ion-color-dark-rgb: 26,32,44;
+	--ion-color-dark-contrast: #ffffff;
+	--ion-color-dark-contrast-rgb: 255,255,255;
+	--ion-color-dark-shade: #171c27;
+	--ion-color-dark-tint: #313641;
+
+  /** medium **/
+	--ion-color-medium: #A0AEC0;
+	--ion-color-medium-rgb: 160,174,192;
+	--ion-color-medium-contrast: #000000;
+	--ion-color-medium-contrast-rgb: 0,0,0;
+	--ion-color-medium-shade: #8d99a9;
+	--ion-color-medium-tint: #aab6c6;
+
+  /** light **/
+	--ion-color-light: #FAFAFA;
+	--ion-color-light-rgb: 250,250,250;
+	--ion-color-light-contrast: #000000;
+	--ion-color-light-contrast-rgb: 0,0,0;
+	--ion-color-light-shade: #dcdcdc;
+	--ion-color-light-tint: #fbfbfb;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Axiforma, "Helvetica Neue", sans-serif;
+}

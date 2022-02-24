@@ -1,0 +1,106 @@
+// ------SeeEverithing----------
+.text-margin-top {
+    margin-top: 1rem;
+}
+
+.text-marginTitle {
+    margin: 0 0.5rem;
+}
+
+.row-seeEverething {
+    position: relative;
+    display: flex;
+}
+
+.text-seeEverithing {
+    margin-top: 0.9rem;
+    color: #2A698C;
+    position: absolute;
+    left: 3rem;
+}
+
+.chevron-icon {
+    position: absolute;
+    left: 8rem;
+    margin-top: 1.5rem;
+    color: #2A698C;
+    width: 1rem;
+    height: 1rem;
+}
+
+// -----------Featured-------------------
+.card-featured {
+    width: 21.5rem;
+    height: 18rem;
+    color: #F4F7FA;
+}
+
+.img-featured {
+    border-top-right-radius: 0.938rem !important;
+    border-top-left-radius: 0.938rem !important;
+    width: 100%;
+    height: auto;
+}
+
+@supports(object-fit: cover) {
+    .img-featured {
+        height: 50%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    position: relative;
+    .card-featured {
+        display: inline-block;
+    }
+}
+
+.container-buttonFavorite {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
+
+.button-favorite {
+    position: absolute;
+    top: 1rem;
+    left: 17rem;
+    color: #F34355;
+    background-color: #FFFFFF;
+    border-radius: 6.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0rem !important;
+}
+
+button button {
+    background-color: white;
+}
+
+button {
+    padding: 0rem !important;
+}
+
+.star-icon {
+    color: #FFAB00;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.5rem 0 1rem;
+}
+
+.people-icon {
+    color: #AFB8C3;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.5rem 0 1rem;
+}
+
+.heart-icon {
+    width: 1.25rem;
+    height: 1.12rem;
+}
