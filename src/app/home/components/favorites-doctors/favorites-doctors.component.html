@@ -1,0 +1,21 @@
+<ion-card *ngIf="doctor">
+  <img [src]="doctor.mainImage" alt=""/>
+  <ion-button color="light" type="button" class="button-favorite">
+    <ion-icon slot="icon-only" name="heart"></ion-icon>
+  </ion-button>
+  <ion-card-header>
+    <ion-card-title>
+      {{doctor.name}}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <div class="row">
+      <p class="price">
+        {{ doctor.price }}
+        <span>
+          / día
+        </span>
+      </p>
+    </div>
+  </ion-card-content>
+</ion-card>

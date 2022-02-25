@@ -1,0 +1,42 @@
+ion-grid {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+ion-row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    padding: 0px;
+    margin: 0px 0px 0px 16px;
+  }
+  > * {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    gap: .5rem;
+  }
+}
+
+ion-chip {
+  padding: 0px;
+  margin: 0px;
+  ion-label {
+    --color: var(--ion-color-primary);
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  ion-icon {
+    color: var(--ion-color-primary);
+    Width: 5px;
+    Height: 8px;
+    margin-right: 10px;
+  }
+}
