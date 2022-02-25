@@ -6,6 +6,8 @@ import { HomePage } from './home.page';
 
 
 import { HomePageRoutingModule } from './home-routing.module';
+import {FavoriteCarDetailComponent} from './components/favorites-doctors/favorites-doctors.component';
+import {FavoritesCardDoctorContainer} from './containers/favorites-card-doctor/favorites-card-doctor.container';
 
 
 @NgModule({
@@ -14,9 +16,12 @@ import { HomePageRoutingModule } from './home-routing.module';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
+
   ],
   declarations: [
     HomePage,
+    FavoriteCarDetailComponent,
+    FavoritesCardDoctorContainer,
 
   ]
 })
