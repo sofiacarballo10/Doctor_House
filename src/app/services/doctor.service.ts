@@ -5,11 +5,12 @@ import { environment } from 'src/environments/environment';
 import { Doctor } from '../models/doctor.model';
 import { ResourceService } from './resource.service';
 
+
 @Injectable({
   providedIn: 'root',
 })
 export class DoctorService extends ResourceService<Doctor> {
-  protected apiURL = `${environment.baseApiUrl}/doctor.data.json`;
+  protected apiURL = `${environment.baseApiUrl}/doctors`;
 
   constructor(httpClient: HttpClient) {
     super(httpClient);

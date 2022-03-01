@@ -1,6 +1,6 @@
-<ion-card *ngIf="doctor">
+<ion-card *ngIf="doctor.favorite">
   <img [src]="doctor.mainImage" alt=""/>
-  <ion-button color="transparent" type="button" class="button-favorite">
+  <ion-button color="transparent" type="button" class="button-favorite" (click)="onClickDeleteFromFavorite(doctor)">
     <ion-icon slot="icon-only" name="heart"></ion-icon>
   </ion-button>
   <ion-card-header>

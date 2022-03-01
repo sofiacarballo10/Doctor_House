@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseApiUrl: '/assets/data',
+  baseApiUrl: 'https://doctor-house.herokuapp.com',
 };
 
 /*

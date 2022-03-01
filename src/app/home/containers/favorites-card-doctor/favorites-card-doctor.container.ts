@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DoctorService} from '../../../services/doctor.service';
-import {ResourceList} from '../../../models/resource-list.model';
+
 import {Doctor} from '../../../models/doctor.model';
 import {map} from 'rxjs/operators';
 
@@ -13,13 +13,13 @@ import {map} from 'rxjs/operators';
 export class FavoritesCardDoctorContainer implements OnInit {
   doctors: Doctor[];
   doctor: any;
+  private res: Doctor[];
   constructor(private doctorService: DoctorService) { }
 
   ngOnInit() {
-    this.doctorService.getAll().pipe(map((res: ResourceList<Doctor>) => res.data))
+    this.doctorService.getAll()
       .subscribe((res: Doctor[]) => {
         this.doctors = res;
       });
   }
-
 }
