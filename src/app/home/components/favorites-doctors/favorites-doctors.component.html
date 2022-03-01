@@ -1,0 +1,21 @@
+<ion-card *ngIf="doctor.favorite">
+  <img [src]="doctor.mainImage" alt=""/>
+  <ion-button color="transparent" type="button" class="button-favorite" (click)="onClickDeleteFromFavorite(doctor)">
+    <ion-icon slot="icon-only" name="heart"></ion-icon>
+  </ion-button>
+  <ion-card-header>
+    <ion-card-title>
+      {{doctor.name}}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <div class="row">
+      <p class="price">
+        {{ doctor.price }}
+        <span>
+          / día
+        </span>
+      </p>
+    </div>
+  </ion-card-content>
+</ion-card>

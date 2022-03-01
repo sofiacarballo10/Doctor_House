@@ -24,3 +24,16 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.button-favorite {
+  right: 1rem;
+  height: fit-content;
+  --ion-color-contrast: var(--ion-color-danger) !important;
+  --border-radius: 50%;
+  --padding-top: 2px;
+  --padding-end: 2px;
+  --padding-bottom: 2px;
+  --padding-start: 2px;
+  position: absolute;
+  top: 1rem;
+}

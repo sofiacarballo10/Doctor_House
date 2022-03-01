@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CarDetailCardComponent } from './car-detail-card.component';
+import { FavoritesCardDoctorContainer } from './favorites-card-doctor.container';
 
-describe('CarDetailCardComponent', () => {
-  let component: CarDetailCardComponent;
-  let fixture: ComponentFixture<CarDetailCardComponent>;
+describe('FavoritesCardDoctorComponent', () => {
+  let component: FavoritesCardDoctorContainer;
+  let fixture: ComponentFixture<FavoritesCardDoctorContainer>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarDetailCardComponent ],
+      declarations: [ FavoritesCardDoctorContainer ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CarDetailCardComponent);
+    fixture = TestBed.createComponent(FavoritesCardDoctorContainer);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
