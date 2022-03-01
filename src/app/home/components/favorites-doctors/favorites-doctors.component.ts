@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Doctor } from '../../../models/doctor.model';
-import {DoctorService} from "../../../services/doctor.service";
+import {DoctorService} from '../../../services/doctor.service';
 @Component({
   selector: 'app-favorite-doctor',
   templateUrl: './favorites-doctors.component.html',
@@ -14,15 +14,10 @@ export class FavoriteCarDetailComponent {
 
   constructor(private doctorService: DoctorService) { }
 
- /* onClickDelete(id){
-    console.log(`anda y el id es ${id}` );
-    this.doctorService.delete(id).subscribe (response =>console.log(response));
-      this.doctors = this.res;
-    }*/
-
   onClickDeleteFromFavorite(doctor){
     doctor.favorite= false;
-  this.doctorService.update(doctor).subscribe (response =>console.log(response));
-  this.doctors = this.res;
+  this.doctorService.update(doctor).subscribe (response => {
+    this.doctors = this.res;
+  });
 }
 }
