@@ -9,13 +9,16 @@ ion-row {
   position: relative;
   display: flex;
   justify-content: space-between;
+  margin-left: 1rem;
 
   h1 {
     font-size: 1.25rem;
+    font-weight: 600;
     line-height: 1.75rem;
     padding: 0px;
-    margin: 0px 0px 0px 16px;
+    --color: var(--ion-color-extra-dark);
   }
+
   > * {
     display: flex;
     align-items: center;
@@ -25,18 +28,20 @@ ion-row {
 }
 
 ion-chip {
+  gap: 0.7rem;
   padding: 0px;
   margin: 0px;
+
   ion-label {
     --color: var(--ion-color-primary);
     font-size: 1rem;
     line-height: 1.5rem;
+    font-weight: 500;
   }
 
   ion-icon {
     color: var(--ion-color-primary);
-    Width: 5px;
-    Height: 8px;
-    margin-right: 10px;
   }
 }
+
+
