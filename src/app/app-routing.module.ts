@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+// @ts-ignore
+import {AllDoctorsComponent} from './explorer/components/all-doctors/all-doctors.component';
 
 const routes: Routes = [
   {
@@ -10,9 +12,15 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
-    path: 'registration1',
-    loadChildren: () => import('./registration1/registration1.module').then( m => m.Registration1PageModule)
+  },
+  {
+    path: 'explorer',
+    redirectTo: 'explorer',
+    pathMatch: 'full'
+  },
+  {
+    path: 'explorer',
+    loadChildren: () => import('./explorer/explorer.module').then( m => m.ExplorerPageModule)
   },
 
 ];
