@@ -1,7 +1,10 @@
 <ion-card *ngFor="let doctor of doctors">
   <div class="image-container">
     <img [src]="doctor.mainImage" alt=""/>
-    <ion-button color="transparent" type="button" class="button-favorite">
+    <ion-button color="transparent" type="button"
+                class="button-favorite-activated"
+                [ngClass]="calculateClasses(doctor.favorite)"
+                (click)="onClickAddFavorite(doctor)">
       <ion-icon slot="icon-only" name="heart"></ion-icon>
     </ion-button>
   </div>
@@ -15,7 +18,7 @@
       <div class="rate-container">
         <ion-icon color="warning" name="star"></ion-icon>
         <span>
-          Speciality: {{doctor.speciality}}
+          Specialty: {{doctor.specialty}}
         </span>
       </div>
       <div class="transmission-container">

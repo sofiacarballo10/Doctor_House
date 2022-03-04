@@ -14,14 +14,14 @@ import {Router} from '@angular/router';
 export class FavoritesCardDoctorContainer implements OnInit {
   doctors: Doctor[];
   doctor: any;
-  private res: Doctor[];
+  private res: boolean;
   constructor(private doctorService: DoctorService, private router: Router) { }
 
   ngOnInit() {
-    this.doctorService.getAll()
-      .subscribe((res: Doctor[]) => {
-        this.doctors = res;
-      });
+      this.doctorService.getAll()
+        .subscribe((res: Doctor[]) => {
+          this.doctors = res;
+        });
   }
   onClick(pRute: string){
 this.router.navigate([pRute]);

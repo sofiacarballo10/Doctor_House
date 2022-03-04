@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,} from '@angular/core';
 import {Doctor} from '../../models/doctor.model';
 import {DoctorService} from '../../services/doctor.service';
 import {Router} from '@angular/router';
@@ -10,9 +10,11 @@ import {Router} from '@angular/router';
 })
 export class DoctorExplorerDetailComponent implements OnInit {
   doctors: Doctor[];
-  private res: Doctor[];
+  doctor: Doctor;
 
-  constructor(private doctorService: DoctorService, private router: Router) { }
+
+  constructor(private doctorService: DoctorService, private router: Router) {
+  }
 
   ngOnInit() {
 
@@ -20,5 +22,19 @@ export class DoctorExplorerDetailComponent implements OnInit {
       .subscribe((res: Doctor[]) => {
         this.doctors = res;
       });
+  }
+  onClickAddFavorite(doctor){
+    doctor.favorite= !doctor.favorite;
+    this.doctorService.update(doctor).subscribe (response =>{
+      this.doctor = response;
+    });
+
+  }
+
+  calculateClasses(isFavorite) {
+    return {
+      'button-favorite-actived': isFavorite,
+      'button-favorite-disabled': !isFavorite,
+    };
   }
 }

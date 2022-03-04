@@ -2,9 +2,9 @@ import { Brand } from './brand.model';
 
 export interface Doctor {
   id: number;
-  licenseS: number;
+  license: number;
   name: string;
-  speciality: string;
+  specialty: string;
   experience: number;
   price: number;
   mainImage: string;
