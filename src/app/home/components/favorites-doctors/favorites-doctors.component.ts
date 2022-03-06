@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Doctor } from '../../../models/doctor.model';
 import {DoctorService} from '../../../services/doctor.service';
@@ -7,7 +7,7 @@ import {DoctorService} from '../../../services/doctor.service';
   templateUrl: './favorites-doctors.component.html',
   styleUrls: ['./favorites-doctors.component.scss'],
 })
-export class FavoriteCarDetailComponent {
+export class FavoritesDoctorsComponent {
   @Input() doctor: Doctor;
   doctors: Doctor[];
   private res: Doctor[];

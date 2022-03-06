@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {DoctorService} from '../../../services/doctor.service';
 
 import {Doctor} from '../../../models/doctor.model';
-import {map} from 'rxjs/operators';
 import {Router} from '@angular/router';
 
 @Component({

@@ -6,8 +6,8 @@ import { ExplorerPage } from './explorer.page';
 const routes: Routes = [
   {
     path: '',
-    component: ExplorerPage
-  }
+    component: ExplorerPage,
+  },
 ];
 
 @NgModule({

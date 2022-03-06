@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-// @ts-ignore
-import {AllDoctorsComponent} from './explorer/components/all-doctors/all-doctors.component';
 
 const routes: Routes = [
   {
