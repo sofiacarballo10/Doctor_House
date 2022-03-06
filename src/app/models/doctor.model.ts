@@ -1,5 +1,3 @@
-import { Brand } from './brand.model';
-
 export interface Doctor {
   id: number;
   licenseS: number;

@@ -6,9 +6,8 @@ import { HomePage } from './home.page';
 
 
 import { HomePageRoutingModule } from './home-routing.module';
-import {FavoriteCarDetailComponent} from './components/favorites-doctors/favorites-doctors.component';
 import {FavoritesCardDoctorContainer} from './containers/favorites-card-doctor/favorites-card-doctor.container';
-
+import {FavoritesDoctorsComponent} from './components/favorites-doctors/favorites-doctors.component';
 
 @NgModule({
   imports: [
@@ -20,8 +19,8 @@ import {FavoritesCardDoctorContainer} from './containers/favorites-card-doctor/f
   ],
   declarations: [
     HomePage,
-    FavoriteCarDetailComponent,
     FavoritesCardDoctorContainer,
+    FavoritesDoctorsComponent,
 
   ]
 })
