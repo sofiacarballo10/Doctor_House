@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import {DoctorService} from '../../../services/doctor.service';
 
 import {Doctor} from '../../../models/doctor.model';
@@ -14,6 +14,7 @@ export class FavoritesCardDoctorContainer implements OnInit {
   doctors: Doctor[];
   doctor: any;
   private res: boolean;
+  @Input() route!: string;
   constructor(private doctorService: DoctorService, private router: Router) { }
 
   ngOnInit() {
@@ -21,8 +22,5 @@ export class FavoritesCardDoctorContainer implements OnInit {
         .subscribe((res: Doctor[]) => {
           this.doctors = res;
         });
-  }
-  onClick(pRute: string){
-this.router.navigate([pRute]);
   }
 }
