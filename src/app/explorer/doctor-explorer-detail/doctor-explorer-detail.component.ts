@@ -12,7 +12,8 @@ export class DoctorExplorerDetailComponent implements OnInit {
   doctors: Doctor[];
   doctor: Doctor;
 
-  constructor(private doctorService: DoctorService, private router: Router) {}
+  constructor(private doctorService: DoctorService, private router: Router) {
+  }
 
   ngOnInit() {
     this.doctorService.getAll().subscribe((res: Doctor[]) => {
@@ -21,15 +22,6 @@ export class DoctorExplorerDetailComponent implements OnInit {
   }
   onClickAddFavorite(doctor) {
     doctor.favorite = !doctor.favorite;
-    this.doctorService.update(doctor).subscribe((response) => {
-      this.doctor = response;
-    });
-  }
-
-  calculateClasses(isFavorite) {
-    return {
-      'button-favorite-actived': isFavorite,
-      'button-favorite-disabled': !isFavorite,
-    };
+    this.doctorService.update(doctor).subscribe((response: Doctor) => response);
   }
 }
