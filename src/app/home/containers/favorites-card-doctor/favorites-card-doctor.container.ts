@@ -1,7 +1,6 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {DoctorService} from '../../../services/doctor.service';
 import {Doctor} from '../../../models/doctor.model';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-favorites-card-doctor',
@@ -10,11 +9,9 @@ import {Router} from '@angular/router';
 })
 // eslint-disable-next-line @angular-eslint/component-class-suffix
 export class FavoritesCardDoctorContainer implements OnInit {
-  @Input() routes!: string;
   doctors: Doctor[];
-  doctor: any;
-  private res: boolean;
-  constructor(private doctorService: DoctorService, private router: Router) { }
+
+  constructor(private doctorService: DoctorService) { }
 
   ngOnInit() {
       this.doctorService.getAll()
