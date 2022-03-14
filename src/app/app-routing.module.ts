@@ -11,6 +11,16 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'explorer',
+    redirectTo: 'explorer',
+    pathMatch: 'full'
+  },
+  {
+    path: 'explorer',
+    loadChildren: () => import('./explorer/explorer.module').then( m => m.ExplorerPageModule)
+  },
+
 ];
 
 @NgModule({
