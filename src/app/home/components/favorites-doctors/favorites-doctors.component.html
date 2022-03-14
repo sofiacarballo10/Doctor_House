@@ -1,4 +1,4 @@
-<ion-card *ngIf="doctor.favorite">
+<ion-card *ngIf="doctor.favorite" [routerLink]="['/profile',doctor.id]">
   <img [src]="doctor.mainImage" alt=""/>
   <ion-button
     color="transparent"

@@ -20,6 +20,16 @@ const routes: Routes = [
     path: 'explorer',
     loadChildren: () => import('./explorer/explorer.module').then( m => m.ExplorerPageModule)
   },
+  {
+    path: 'profile',
+    redirectTo: 'profile',
+    pathMatch: 'full'
+  },
+  {
+    path: 'profile/:id',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+
 
 ];
 
