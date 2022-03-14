@@ -10,7 +10,15 @@ import { ExplorerPage } from './explorer.page';
 import { DoctorExplorerDetailComponent } from './doctor-explorer-detail/doctor-explorer-detail.component';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, ExplorerPageRoutingModule],
-  declarations: [ExplorerPage, DoctorExplorerDetailComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    ExplorerPageRoutingModule
+  ],
+  declarations: [
+    ExplorerPage,
+    DoctorExplorerDetailComponent
+  ],
 })
 export class ExplorerPageModule {}

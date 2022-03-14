@@ -1,11 +1,14 @@
 <ion-card *ngFor="let doctor of doctors">
   <div class="image-container">
     <img [src]="doctor.mainImage" alt="" />
-    <ion-button color="transparent" type="button" class="button-favorite-activated"
-                [ngClass]=
-                  "{'button-favorite-actived': doctor.favorite,
-                    'button-favorite-disabled': !doctor.favorite}"
-                (click)="onClickAddFavorite(doctor)">
+    <ion-button
+      color="transparent"
+      type="button"
+      class="button-favorite-activated"
+      [ngClass]=
+        "{'button-favorite-actived': doctor.favorite,
+          'button-favorite-disabled': !doctor.favorite}"
+      (click)="onClickAddFavorite(doctor)">
       <ion-icon slot="icon-only" name="heart"></ion-icon>
     </ion-button>
   </div>
