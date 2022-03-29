@@ -8,13 +8,15 @@ import { ExplorerPageRoutingModule } from './explorer-routing.module';
 
 import { ExplorerPage } from './explorer.page';
 import { DoctorExplorerDetailComponent } from './doctor-explorer-detail/doctor-explorer-detail.component';
+import { SharedPageModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ExplorerPageRoutingModule
+    ExplorerPageRoutingModule,
+    SharedPageModule,
   ],
   declarations: [
     ExplorerPage,

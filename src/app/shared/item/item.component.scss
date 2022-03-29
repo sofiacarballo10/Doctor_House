@@ -1,0 +1,22 @@
+ion-item {
+    --background: var(--ion-color-extra-light);
+    --border-radius: 22px;
+    --padding-start: 16px;
+    --padding-top: 24px;
+    --padding-bottom: 24px;
+    --detail-icon-opacity: 1;
+    margin: 16px;
+  
+    img {
+      height: auto;
+    }
+  
+    p {
+      margin: 0;
+      padding: 0;
+  
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
+    }
+  }
