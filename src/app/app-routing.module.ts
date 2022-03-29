@@ -19,6 +19,9 @@ const routes: Routes = [
   {
     path: 'explorer',
     loadChildren: () => import('./explorer/explorer.module').then( m => m.ExplorerPageModule)
+  },  {
+    path: 'shared',
+    loadChildren: () => import('./shared/shared.module').then( m => m.SharedPageModule)
   },
   {
     path: 'profile',
@@ -29,6 +32,7 @@ const routes: Routes = [
     path: 'profile/:id',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
+
 
 
 ];

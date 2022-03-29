@@ -1,0 +1,33 @@
+:host {
+  display: block;
+
+  ion-toolbar {
+    --padding-top: 20px;
+    --background: var(--toolbar-bg-color, transparent);
+
+    ion-back-button,
+    ::ng-deep ion-button {
+      position: relative;
+      --background: var(--back-button-bg-color, var(--ion-color-extra-light));
+      --color: var(--ion-color-dark);
+      --border-radius: 50%;
+      --color-focused: var(--ion-color-secondary);
+      --color-hover: var(--ion-color-secondary);
+    }
+
+    ion-back-button {
+      left: 16px;
+    }
+
+    ::ng-deep ion-button:last-of-type {
+      right: 16px;
+    }
+
+    ion-title {
+      font-size: 1.185rem;
+      line-height: var(--line-height-h4);
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}

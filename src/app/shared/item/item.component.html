@@ -1,0 +1,30 @@
+<ion-item lines="none" [detail]="detail">
+  <ng-container [ngSwitch]="image.type">
+    <ion-avatar
+      slot="start"
+      *ngSwitchCase="'avatar'">
+      <ion-img [src]="image.src" [alt]="image.altText"> </ion-img>
+    </ion-avatar>
+    <ion-thumbnail
+      slot="start"
+      *ngSwitchDefault>
+      <ion-img [src]="image.src" [alt]="image.altText"> </ion-img>
+    </ion-thumbnail>
+  </ng-container>
+  <ion-label>
+    <ion-text>
+      <p class="emphasis-main text-ellipsis" *ngIf="title">
+        {{ title }}
+      </p>
+      <ng-content select="[title]">
+      </ng-content>
+    </ion-text>
+    <ion-text>
+      <p class="emphasis text-ellipsis" *ngIf="subTitle">
+        {{ subTitle }}
+      </p>
+      <ng-content select="[subTitle]">
+      </ng-content>
+    </ion-text>
+  </ion-label>
+</ion-item>
