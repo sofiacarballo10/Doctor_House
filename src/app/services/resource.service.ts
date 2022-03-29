@@ -8,7 +8,8 @@ export abstract class ResourceService<T> {
   constructor(protected httpClient: HttpClient) { }
 
   getAll(): Observable<Doctor[]> {
-    return this.httpClient.get<Doctor[]>(`${this.apiURL}`);
+    const data =  this.httpClient.get<Doctor[]>(`${this.apiURL}`);
+    return data;
   }
 
   update(doctor: Doctor): Observable<Doctor> {

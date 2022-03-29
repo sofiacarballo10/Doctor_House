@@ -19,7 +19,11 @@ const routes: Routes = [
   {
     path: 'explorer',
     loadChildren: () => import('./explorer/explorer.module').then( m => m.ExplorerPageModule)
+  },  {
+    path: 'shared',
+    loadChildren: () => import('./shared/shared.module').then( m => m.SharedPageModule)
   },
+
 
 ];
 
