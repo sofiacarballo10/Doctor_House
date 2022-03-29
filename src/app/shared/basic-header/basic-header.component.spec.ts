@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { SharedPage } from './shared.page';
+import { BasicHeaderComponent } from './basic-header.component';
 
-describe('SharedPage', () => {
-  let component: SharedPage;
-  let fixture: ComponentFixture<SharedPage>;
+describe('BasicHeaderComponent', () => {
+  let component: BasicHeaderComponent;
+  let fixture: ComponentFixture<BasicHeaderComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ SharedPage ],
+      declarations: [ BasicHeaderComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SharedPage);
+    fixture = TestBed.createComponent(BasicHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

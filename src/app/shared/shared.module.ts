@@ -4,17 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SharedPageRoutingModule } from './shared-routing.module';
-
-import { SharedPage } from './shared.page';
+import { BasicHeaderComponent } from './basic-header/basic-header.component'
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SharedPageRoutingModule
   ],
-  declarations: [SharedPage]
+  exports: [
+    BasicHeaderComponent,
+    ItemComponent,
+  ],
+  declarations: [BasicHeaderComponent, ItemComponent,]
 })
 export class SharedPageModule {}

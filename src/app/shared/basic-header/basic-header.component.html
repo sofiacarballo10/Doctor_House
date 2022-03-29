@@ -1,0 +1,12 @@
+<ion-header class="ion-no-border" translucent >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="title">{{ title }}</ion-title>
+    <ion-buttons slot="end">
+      <ng-content select="ion-button"></ng-content>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
