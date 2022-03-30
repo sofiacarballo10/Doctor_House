@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { BasicHeaderComponent } from './basic-header/basic-header.component'
 import { ItemComponent } from './item/item.component';
+import { SectionComponent } from './section/section.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { ItemComponent } from './item/item.component';
   exports: [
     BasicHeaderComponent,
     ItemComponent,
+    SectionComponent,
   ],
-  declarations: [BasicHeaderComponent, ItemComponent,]
+  declarations: [BasicHeaderComponent, ItemComponent, SectionComponent]
 })
 export class SharedPageModule {}

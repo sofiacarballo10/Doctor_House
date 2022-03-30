@@ -60,3 +60,26 @@
   position: absolute;
   top: 1rem;
 }
+
+.emphasis-main {
+  font-size: 1.125rem !important;
+  line-height: 1.25rem;
+  font-weight: 600 !important;
+}
+
+.emphasis {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 400 !important;
+}
+
+.small {
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden!important;
+  text-overflow: ellipsis!important;
+}

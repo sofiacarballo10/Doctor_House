@@ -1,0 +1,18 @@
+<div class="container-title">
+  <h3 class="text-ellipsis emphasis-main">
+    {{ title }}
+  </h3>
+  <ion-button
+    *ngIf="showButton"
+    fill="clear"
+    type="button"
+    color="primary"
+    [routerLink]="route">
+    {{ 'ver todo' }}
+    <ion-icon name="chevron-forward"></ion-icon>
+  </ion-button>
+</div>
+<div class="scrollable-content">
+  <ng-content select="[content]"></ng-content>
+</div>
+<ng-content></ng-content>
