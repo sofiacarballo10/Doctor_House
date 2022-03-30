@@ -23,6 +23,16 @@ const routes: Routes = [
     path: 'shared',
     loadChildren: () => import('./shared/shared.module').then( m => m.SharedPageModule)
   },
+  {
+    path: 'profile',
+    redirectTo: 'profile',
+    pathMatch: 'full'
+  },
+  {
+    path: 'profile/:id',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+
 
 
 ];

@@ -1,0 +1,54 @@
+.cover-doctor {
+  text-align: left;
+  width: 100%;
+  height: auto;
+}
+
+.header-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-shared {
+  height: fit-content;
+  --border-radius: 50%;
+  --padding-top: 7px;
+  --padding-end: 7px;
+  --padding-bottom: 7px;
+  --padding-start: 7px;
+  margin-left: 1rem;
+}
+
+.container-doctor {
+  position: relative;
+  left: 1rem;
+  bottom: 5rem;
+
+  h2 {
+    color: var(--ion-color-primary-contrast);
+    font-size: 1.5rem;
+  }
+}
+h1 {
+  margin: 1rem 1rem 2rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0 1rem 0 1rem;
+  font-weight: 400;
+}
+
+ion-button {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+
+.limit-text-height {
+  height: 40px;
+  overflow: hidden;
+}
