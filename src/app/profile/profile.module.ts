@@ -8,13 +8,15 @@ import { ProfilePageRoutingModule } from './profile-routing.module';
 
 import { ProfilePage } from './profile.page';
 import { InformationComponent } from './information/information.component';
+import { SharedPageModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ProfilePageRoutingModule
+    ProfilePageRoutingModule,
+    SharedPageModule,
   ],
   declarations: [
     ProfilePage,
