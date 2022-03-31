@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseApiUrl: 'https://doctor-house.herokuapp.com/v2',
+  baseApiUrl: 'https://doctor-house-br-v2-reactive-st.herokuapp.com/v2',
 };
 
 /*
