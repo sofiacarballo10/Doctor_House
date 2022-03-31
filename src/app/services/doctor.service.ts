@@ -6,7 +6,6 @@ import { Doctor } from '../models/doctor.model';
 import { ResourceService } from './resource.service';
 import { map } from 'rxjs/operators';
 
-
 @Injectable({
   providedIn: 'root',
 })
