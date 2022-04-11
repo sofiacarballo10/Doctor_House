@@ -1,0 +1,43 @@
+app-section {
+    ::ng-deep .scrollable-content {
+      padding: 8px 0 !important;
+    }
+  }
+  
+  ion-list {
+    background-color: var(--ion-color-extra-light);
+    border-radius: 22px;
+    padding-top: 24px;
+    margin-bottom: 16px;
+    width: auto;
+  
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    ion-item {
+      --background: var(--ion-color-extra-light);
+      --padding-start: 0;
+    }
+  
+    .emphasis-main {
+      color: var(--ion-color-extra-dark);
+    }
+  
+    .emphasis {
+      color: var(--ion-color-medium);
+    }
+  }
+  
+  ion-icon{
+    font-size: 2rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .divider {
+    margin-bottom: 16px;
+  }
+  
