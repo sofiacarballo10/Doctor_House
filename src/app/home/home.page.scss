@@ -1,0 +1,69 @@
+ion-content {
+    > *,
+    ion-header > * {
+      margin-bottom: 1.5rem;
+    }
+  
+  }
+  
+  ion-header.scrolled {
+    box-shadow: 8px 8px 20px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  ion-toolbar {
+  
+    &.toolbar-content {
+      --padding-top: 25px;
+    }
+  
+    ion-title {
+      font-size: var(--font-size-h1);
+      line-height: var(--line-height-h2);
+      font-weight: 600;
+  
+      span::before {
+        content: "\A";
+        white-space: pre;
+      }
+    }
+  
+    ion-buttons {
+      margin-inline-end: 16px;
+  
+      &[slot="start"] {
+        margin-inline-start: 16px;
+      }
+  
+      ion-avatar {
+        height: 40px;
+        width: 40px;
+      }
+  
+      ion-fab-button {
+        height: 48px;
+        width: 48px;
+        --box-shadow: none;
+      }
+    }
+  
+    ion-searchbar[class*="searchbar-"] {
+      --icon-color: var(--ion-color-dark);
+      --background: var(--ion-color-extra-light);
+  
+      ::ng-deep {
+        ion-icon.searchbar-search-icon {
+          width: 16px;
+          margin-left: 12px;
+          margin-inline-start: 12px;
+        }
+        input.searchbar-input {
+          -webkit-padding-start: 40px !important;
+          padding-inline-start: 40px !important;
+        }
+      }
+    }
+  }
+  
+  ion-content :last-child::ng-deep hirit-section .scrollable-content {
+    padding-bottom: 0;
+  }
