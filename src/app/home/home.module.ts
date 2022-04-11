@@ -8,6 +8,8 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import {FavoritesCardDoctorContainer} from './containers/favorites-card-doctor/favorites-card-doctor.container';
 import {FavoritesDoctorsComponent} from './components/favorites-doctors/favorites-doctors.component';
+import { SpecialtyComponent } from './components/specialty/specialty.component';
+import { SpecialtyContainer } from './containers/specialty/specialty.container';
 
 @NgModule({
   imports: [
@@ -21,6 +23,8 @@ import {FavoritesDoctorsComponent} from './components/favorites-doctors/favorite
     HomePage,
     FavoritesCardDoctorContainer,
     FavoritesDoctorsComponent,
+    SpecialtyComponent,
+    SpecialtyContainer
 
   ]
 })
