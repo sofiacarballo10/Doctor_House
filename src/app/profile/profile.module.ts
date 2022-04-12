@@ -7,8 +7,9 @@ import { IonicModule } from '@ionic/angular';
 import { ProfilePageRoutingModule } from './profile-routing.module';
 
 import { ProfilePage } from './profile.page';
-import { InformationComponent } from './information/information.component';
+import { InformationComponent } from './components/information/information.component';
 import { SharedPageModule } from '../shared/shared.module';
+import { PlacesComponent } from './components/places/places.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { SharedPageModule } from '../shared/shared.module';
   declarations: [
     ProfilePage,
     InformationComponent,
+    PlacesComponent,
   ]
 })
 export class ProfilePageModule {}
