@@ -1,3 +1,59 @@
-<ion-content>
+<ion-header
+  [translucent]="true"
+  class="ion-no-border"
+  [ngClass]="{ scrolled }">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon
+        color="primary"
+        name="map-marker">
+      </ion-icon>
+      <ion-select interface="popover" value="02">
+        <ion-select-option value="01">13 Avenida Sur</ion-select-option>
+        <ion-select-option value="02">14 Avenida Sur</ion-select-option>
+        <ion-select-option value="03">15 Avenida Sur</ion-select-option>
+        <ion-select-option value="04">16 Avenida Sur</ion-select-option>
+        <ion-select-option value="05">17 Avenida Sur</ion-select-option>
+        <ion-select-option value="06">18 Avenida Sur</ion-select-option>
+      </ion-select>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <img src="../../assets/icon/Avatar (4).png" alt="Avatar">
+      </ion-avatar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content
+  [scrollEvents]="true"
+  (ionScroll)="onScroll($event)">
+  <ion-header
+    [translucent]="true"
+    class="ion-no-border">
+    <ion-toolbar class="toolbar-content">
+      <ion-title>
+        {{ 'BIENVENIDO' }}
+        <span>
+          Andrés
+        </span>
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-fab-button color="secondary">
+          <ion-icon
+            name="bell"
+            color="light">
+          </ion-icon>
+        </ion-fab-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-searchbar
+        mode="ios"
+        type="search"
+        debounce="350"
+        autocomplete="off"
+        inputmode="search"
+        [placeholder]="'Perfil de usuario'">
+      </ion-searchbar>
+    </ion-toolbar>
   <app-favorites-card-doctor></app-favorites-card-doctor>
-</ion-content>
