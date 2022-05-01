@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { addIcons } from 'ionicons';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor() {
+    this.addCustomIcons();
+  }
+  addCustomIcons(): void {
+    addIcons({
+      bell: 'assets/icons/bell.icon.svg'
+    });
+  }
 }
