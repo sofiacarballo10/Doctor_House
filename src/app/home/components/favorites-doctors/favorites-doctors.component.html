@@ -1,12 +1,11 @@
 <ion-card *ngIf="doctor.favorite" [routerLink]="['/profile',doctor.id]">
   <img [src]="doctor.mainImage" alt=""/>
-  <ion-button
-    color="transparent"
-    type="button"
-    class="button-favorite-activated"
-    (click)="onClickDeleteFromFavorite(doctor)">
-    <ion-icon slot="icon-only" name="heart"></ion-icon>
-  </ion-button>
+  <div class="header-options">
+    <ion-fab-button color="light"
+  (click)="onClickDeleteFromFavorite(doctor)">
+    <ion-icon name="heart" color="danger"></ion-icon>
+  </ion-fab-button>
+  </div>
   <ion-card-header>
     <ion-card-title>
       {{doctor.name}}
@@ -15,7 +14,7 @@
   <ion-card-content>
     <div class="row">
       <p class="price">
-        {{ doctor.price }}
+        {{ doctor.price | currency:'USD'}}
         <span>
           / día
         </span>

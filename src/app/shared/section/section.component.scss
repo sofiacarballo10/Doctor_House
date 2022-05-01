@@ -14,10 +14,11 @@
     }
   
     .scrollable-content {
-      display: flex;
-      align-items: center;
+      display: var(--display-content, flex);
+      align-items: var(--align-items-content, center);
       overflow: auto hidden;
-      padding: 1.5rem 0 0.5rem;
+      padding: var(--padding-content, 1.5rem 0 0.5rem);
+      flex-direction: var(--direction-content, row);
   
       ::ng-deep > *:not(:last-child) {
         margin-right: 1rem;

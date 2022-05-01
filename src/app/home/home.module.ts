@@ -10,6 +10,7 @@ import {FavoritesCardDoctorContainer} from './containers/favorites-card-doctor/f
 import {FavoritesDoctorsComponent} from './components/favorites-doctors/favorites-doctors.component';
 import { SpecialtyComponent } from './components/specialty/specialty.component';
 import { SpecialtyContainer } from './containers/specialty/specialty.container';
+import { SharedPageModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { SpecialtyContainer } from './containers/specialty/specialty.container';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
+    SharedPageModule
 
   ],
   declarations: [
