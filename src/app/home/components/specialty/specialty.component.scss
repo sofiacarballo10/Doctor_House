@@ -1,58 +1,22 @@
-ion-card {
-    display: inline-block;
-    border-radius: 22px;
-    width: 344px;
-    margin: 0;
-    --color: var(--ion-color-dark);
-  
-    .image-container {
-      width: 344px;
-      height: 180px;
-  
-      img {
-        border-radius: 22px 22px 0 0;
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        object-position: center center;
-      }
+ion-list {
+  width: 100%;
+  background: var(--ion-color-extra-light);
+  border-radius: 22px;
+
+  ion-item {
+    --detail-icon-opacity: 1;
+    --background: var(--ion-color-extra-light);
+
+    &:not(:last-of-type) {
+      margin-bottom: .75rem;
     }
-  
-    ion-card-header {
-      padding: 20px 20px 5px 16px;
+
+    ion-icon[slot="start"] {
+      margin-right: 1rem;
+    }
+    ion-label {
+      margin-left: 1rem;
     }
   }
-  
-  ion-card-content {
-    padding: 0px 0px 24px 16px;
-  
-    .row {
-      display: flex;
-      justify-content: flex-start;
-  
-      &:not(:last-of-type) {
-        margin-bottom: 0.5rem;
-      }
-  
-      > * {
-        display: flex;
-        align-items: center;
-        margin-right: 1.5rem;
-        gap: 0.5rem;
-      }
-      .seats-container {
-        ion-icon {
-          font-size: 0.938rem;
-        }
-      }
-  
-      span {
-        color: var(--ion-color-medium);
-      }
-  
-      .emphasis-main .emphasis {
-        color: var(--ion-color-extra-dark);
-      }
-    }
-  }
+}
   

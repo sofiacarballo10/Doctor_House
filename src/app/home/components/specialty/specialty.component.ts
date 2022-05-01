@@ -6,9 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./specialty.component.scss'],
 })
 export class SpecialtyComponent implements OnInit {
-
-  constructor() { }
+  specialtys: [{ name: string; icon: string }, { name: string; icon: string }, { name: string; icon: string }] = [
+    {
+      name: 'Clínico',
+      icon: 'accessibility-outline'
+    },
+    { name: 'oftalmología', 
+    icon: 'accessibility-outline'},
+    { name: 'Radiología', 
+    icon: 'accessibility-outline'}
+  ];
+  constructor() {}
 
   ngOnInit() {}
-
 }
