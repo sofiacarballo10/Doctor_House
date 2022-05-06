@@ -1,16 +1,19 @@
 <div class="cover-doctor" *ngIf="doctor">
   <img [src]="doctor.mainImage" alt="" class="image-cover"/>
   <div class="header-options">
-    <ion-button color="light" type="button" class="button-favorite-activated">
-      <ion-icon slot="icon-only" name="heart"></ion-icon>
-    </ion-button>
-    <ion-button color="light" type="button" class="button-shared">
-      <ion-icon name="share-social-outline"></ion-icon>
-    </ion-button>
+    <ion-fab-button color="light">
+      <ion-icon color="danger" name="heart"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="light">
+      <ion-icon
+        color="dark"
+        name="share-social-outline">
+      </ion-icon>
+    </ion-fab-button>
   </div>
-  <div class="container-doctor">
-    <h2>{{doctor.name}}</h2>
-  </div>
+  <ion-chip>
+    <h2>{{ doctor.name }} : {{ doctor.specialty.description }}</h2>
+  </ion-chip>
 </div>
 <h1>Experiences</h1>
 <p [ngClass]="{'limit-text-height': isReadMore}">
