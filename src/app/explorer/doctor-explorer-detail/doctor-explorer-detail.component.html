@@ -1,44 +1,49 @@
-<app-basic-header title="Todos nuestros doctores"></app-basic-header>
-<ion-card *ngFor="let doctor of doctors">
-  <div class="image-container">
-    <img [src]="doctor.mainImage" alt="" />
-    <ion-button
-      color="transparent"
-      type="button"
-      class="button-favorite-activated"
-      [ngClass]=
+<div
+  class="header-container"
+  [style.background-image]="">
+  <div class="overlay"></div>
+  <app-basic-header>
+    <ion-fab-button color="light"
+    [ngClass]=
         "{'button-favorite-actived': doctor.favorite,
           'button-favorite-disabled': !doctor.favorite}"
       (click)="onClickAddFavorite(doctor)">
-      <ion-icon slot="icon-only" name="heart"></ion-icon>
-    </ion-button>
+      <ion-icon color="danger" name="heart"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="light">
+      <ion-icon
+        color="dark"
+        name="share-social-outline">
+      </ion-icon>
+    </ion-fab-button>
+  </app-basic-header>
+  <div class="container-car">
+    <div class="row">
+      <div>
+        <ion-icon
+          color="warning"
+          name="star">
+        </ion-icon>
+        <span>
+          experience: {{ doctor.experience }}
+        </span>
+      </div>
+      <div>
+        <ion-icon name="joystick"></ion-icon>
+        <span>
+          Specialty: {{ doctor.specialty.description }}
+        </span>
+      </div>
+      <div>
+        <ion-icon name="people-outline"></ion-icon>
+        <span>
+          {{ 'car.seats' }}
+        </span>
+      </div>
+    </div>
+    <h1> {{ doctor.name }} </h1>
+    <ion-chip>
+      <h2>{{ doctor.price | currency:'USD' }}/día</h2>
+    </ion-chip>
   </div>
-  <ion-card-header>
-    <ion-card-title>
-      {{doctor.name}}
-    </ion-card-title>
-  </ion-card-header>
-  <ion-card-content>
-    <div class="row">
-      <div class="rate-container">
-        <ion-icon color="warning" name="star"></ion-icon>
-        <span>
-          Specialty: {{doctor.specialty}}
-        </span>
-      </div>
-      <div class="transmission-container">
-        <span>
-          experience: {{doctor.experience}} años
-        </span>
-      </div>
-    </div>
-    <div class="row">
-      <p class="price">
-        {{ doctor.price }}
-        <span class="per-day">
-          / día
-        </span>
-      </p>
-    </div>
-  </ion-card-content>
-</ion-card>
+</div>
