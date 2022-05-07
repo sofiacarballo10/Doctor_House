@@ -13,6 +13,10 @@ export class DoctorExplorerDetailComponent implements OnInit {
   doctors: Doctor[];
   doctor: Doctor;
 
+  get mainImage(): string {
+    return `url(${this.doctor?.mainImage})`;
+  }
+
   constructor(private doctorService: DoctorService) {
   }
 
