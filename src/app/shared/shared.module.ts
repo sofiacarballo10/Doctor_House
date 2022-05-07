@@ -12,7 +12,7 @@ import { SafeStylesPipe } from './pipes/safe-styles.pipe';
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, RouterModule],
-  exports: [BasicHeaderComponent, ItemComponent, SectionComponent],
+  exports: [BasicHeaderComponent, ItemComponent, SectionComponent, SafeStylesPipe],
   declarations: [BasicHeaderComponent, ItemComponent, SectionComponent, SafeStylesPipe],
 })
 export class SharedPageModule {}

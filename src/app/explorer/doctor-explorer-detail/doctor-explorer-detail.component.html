@@ -1,40 +1,31 @@
-<app-basic-header title="Todos nuestros doctores"></app-basic-header>
 <ion-card *ngFor="let doctor of doctors">
   <div class="image-container">
     <img [src]="doctor.mainImage" alt="" />
-    <ion-button
-      color="transparent"
-      type="button"
-      class="button-favorite-activated"
-      [ngClass]=
-        "{'button-favorite-actived': doctor.favorite,
-          'button-favorite-disabled': !doctor.favorite}"
+    <ion-button 
+      color="light" 
+      type="button" 
+      class="button-favorite-activated" 
+      [ngClass]="{'button-favorite-actived': doctor.favorite,
+      'button-favorite-disabled': !doctor.favorite}" 
       (click)="onClickAddFavorite(doctor)">
       <ion-icon slot="icon-only" name="heart"></ion-icon>
     </ion-button>
   </div>
   <ion-card-header>
-    <ion-card-title>
-      {{doctor.name}}
+    <ion-card-title color="primary">
+      {{ doctor.name }}
+      <span>
+         (experience: {{ doctor.experience }} años)
+      </span>
     </ion-card-title>
   </ion-card-header>
   <ion-card-content>
-    <div class="row">
-      <div class="rate-container">
-        <ion-icon color="warning" name="star"></ion-icon>
-        <span>
-          Specialty: {{doctor.specialty}}
-        </span>
-      </div>
-      <div class="transmission-container">
-        <span>
-          experience: {{doctor.experience}} años
-        </span>
-      </div>
-    </div>
-    <div class="row">
+    <span>
+      {{ doctor.specialty?.description }}
+    </span>
+    <div>
       <p class="price">
-        {{ doctor.price }}
+        {{ doctor.price | currency:'USD' }}
         <span class="per-day">
           / día
         </span>
