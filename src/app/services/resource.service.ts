@@ -8,8 +8,8 @@ export abstract class ResourceService<T> {
 
   constructor(protected httpClient: HttpClient) { }
 
-  getAll(): Observable<Pageable<Doctor>> {
-    const data =  this.httpClient.get<Pageable<Doctor>>(`${this.apiURL}`);
+  getAll(): Observable<Pageable<T>> {
+    const data =  this.httpClient.get<Pageable<T>>(`${this.apiURL}`);
     return data;
   }
 
