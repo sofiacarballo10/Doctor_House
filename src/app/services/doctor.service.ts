@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Doctor } from '../models/doctor.model';
 import { ResourceService } from './resource.service';
 import { map } from 'rxjs/operators';
+import {Pageable} from "./pageable.model";
 
 
 @Injectable({
@@ -18,8 +19,9 @@ export class DoctorService extends ResourceService<Doctor> {
   }
 
   getById(id: number) {
-    return this.getAll().pipe(
-      map((resourceData: Doctor[]) =>
+    return this.getAll()
+      .pipe(map((data: Pageable<Doctor>) => data.content))
+      .pipe(map((resourceData: Doctor[]) =>
         resourceData.find((doctor: Doctor) =>
           doctor.id === id))
     );

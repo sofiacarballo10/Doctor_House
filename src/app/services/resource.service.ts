@@ -1,14 +1,15 @@
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Doctor} from "../models/doctor.model";
+import {Doctor} from '../models/doctor.model';
+import {Pageable} from './pageable.model';
 
 export abstract class ResourceService<T> {
   protected apiURL: string;
 
   constructor(protected httpClient: HttpClient) { }
 
-  getAll(): Observable<Doctor[]> {
-    const data =  this.httpClient.get<Doctor[]>(`${this.apiURL}`);
+  getAll(): Observable<Pageable<Doctor>> {
+    const data =  this.httpClient.get<Pageable<Doctor>>(`${this.apiURL}`);
     return data;
   }
 

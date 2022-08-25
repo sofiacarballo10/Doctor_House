@@ -1,6 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import {DoctorService} from '../../../services/doctor.service';
 import {Doctor} from '../../../models/doctor.model';
+import {map} from 'rxjs/operators';
+import {Pageable} from '../../../services/pageable.model';
 
 @Component({
   selector: 'app-favorites-card-doctor',
@@ -15,6 +17,7 @@ export class FavoritesCardDoctorContainer implements OnInit {
 
   ngOnInit() {
       this.doctorService.getAll()
+        .pipe(map((data: Pageable<Doctor>) => data.content))
         .subscribe((res: Doctor[]) => {
           this.doctors = res;
         });
